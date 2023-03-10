@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="scripts/success.js"></script>
+    <script src="scripts/valid.js"></script>
+    <title>Űrlap validálás | Nguyen Duc Duy</title>
+  </head>
+
+  <body>
+    <header></header>
+    <article>
+      <form
+        action="action.php"
+        method="get"
+        onsubmit="return validateForm()"
+        name="validTeszt"
+      >
+        <label for="kNev">Keresztnév:</label><br />
+        <input type="text" id="kNev" name="kNev" /><br />
+        <label for="vNev">Vezetéknév:</label><br />
+        <input type="text" id="vNev" name="vNev" />
+        <br />
+        <label for="jelszo1">Jelszó1:</label><br />
+        <input type="password" id="jelszo1" name="jelszo1" pattern="^[a-zA-z]{4,}+$" /><br />
+        <label for="jelszo2">Jelszó2:</label><br />
+        <input type="password" id="jelszo2" name="jelszo2" pattern="^[a-zA-z]{4,}+$" />
+        <br>
+        <input type="submit" value="Megerősít">
+      </form>
+    </article>
+    <footer></footer>
+  </body>
+</html>
